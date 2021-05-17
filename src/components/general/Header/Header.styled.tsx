@@ -17,7 +17,7 @@ export const Content = styled.div`
 export const TitleBg = styled.div`
   color: white;
   font-size: 30px;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Lexend';
   font-weight: bold;
 `;
 export const TitleSm = styled.div`

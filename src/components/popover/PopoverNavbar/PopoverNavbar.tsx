@@ -23,9 +23,9 @@ function PopoverNavbar() {
 
   const content =
     <PopContent>
-      <PopLink>Profile</PopLink>
+      <PopLink>Dashboard</PopLink>
       <PopLink>Settings</PopLink>
-      <PopLink onClick={() => signoutHandler()}>Sign out</PopLink>
+      <PopLink onClick={() => signoutHandler()}>Log out</PopLink>
     </PopContent>
 
   return (

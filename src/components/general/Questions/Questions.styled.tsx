@@ -17,7 +17,7 @@ export const TitleSm = styled.div`
 export const TitleBg = styled.div`
   color: ${colors.primaryMedium};
   font-size: 30px;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Lexend';
   font-weight: bold;
 `;
 

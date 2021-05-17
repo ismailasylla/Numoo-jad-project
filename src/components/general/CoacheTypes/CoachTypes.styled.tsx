@@ -35,7 +35,7 @@ export const Type = styled.span`
 export const TitleBg = styled.div`
   color: ${colors.primaryMedium};
   font-size: 20px;
-  /* font-family: 'Cormorant Garamond', serif; */
+  /* font-family: 'Lexend', serif; */
   /* font-weight: bold; */
   text-align: right;
   margin-bottom: 10px;
