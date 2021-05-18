@@ -1,5 +1,5 @@
-import React from 'react';
-import { Container } from './ButtonNormal.styled';
+import React from "react";
+import { Container } from "./ButtonNormal.styled";
 
 interface Props {
   label: string | React.ReactNode;
@@ -12,10 +12,18 @@ function ButtonNormal({ label, fill, onClick, disabled }: Props): JSX.Element {
   return (
     <Container
       fill={fill}
-      onClick={disabled ? () => {null} : onClick}
+      onClick={
+        disabled
+          ? () => {
+              null;
+            }
+          : onClick
+      }
       disabled={disabled}
-    >{label}</Container>
-  )
+    >
+      {label}
+    </Container>
+  );
 }
 
 export default ButtonNormal;
