@@ -5,7 +5,4 @@ import { env_dev } from "./config";
 const app = firebase.initializeApp(env_dev);
 const auth = app.auth();
 
-export {
-  app,
-  auth
-}
+export { app, auth };
