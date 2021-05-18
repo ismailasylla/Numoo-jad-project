@@ -1,6 +1,6 @@
-import React, { useState, useRef } from 'react';
-import { Container, FormWrapper } from './SignupForm.styled';
-import { useAuth } from '../../../context/AuthContext';
+import React, { useState, useRef } from "react";
+import { Container, FormWrapper } from "./SignupForm.styled";
+import { useAuth } from "../../../context/AuthContext";
 import { ButtonNormal, InputText } from "components";
 import { notify } from "utils";
 
@@ -22,55 +22,47 @@ function Signup(props: any) {
         await signup(email, password);
       } catch (error) {
         setLoading(false);
-        notify([
-          'open',
-          'Something went wrong',
-          error.message
-        ]);
+        notify(["open", "Something went wrong", error.message]);
       }
     } else {
       setLoading(false);
-      notify([
-        'open', 
-        'Something went wrong', 
-        'Please fill all the inputs'
-      ]);
+      notify(["open", "Something went wrong", "Please fill all the inputs"]);
     }
-  }
+  };
 
   return (
     <Container>
       <FormWrapper>
         <InputText
-          type={'text'}
-          label={'Email'}
-          placeholder={'abc@domain.com'}
+          type={"text"}
+          label={"Email"}
+          placeholder={"abc@domain.com"}
           name="email"
           ref={emailRef}
         />
         <InputText
-          type={'password'}
-          label={'Password'}
-          placeholder={'******'}
+          type={"password"}
+          label={"Password"}
+          placeholder={"******"}
           name="password"
           ref={passwordRef}
         />
         <InputText
-          type={'password'}
-          label={'Confirm password'}
-          placeholder={'******'}
+          type={"password"}
+          label={"Confirm password"}
+          placeholder={"******"}
           name="password"
           ref={confirmPasswordRef}
         />
         <ButtonNormal
-          label={loading ? 'Loading...' : 'REGISTER'}
+          label={loading ? "Loading..." : "REGISTER"}
           fill="true"
           onClick={() => onSubmit()}
           disabled={loading}
         />
       </FormWrapper>
     </Container>
-  )
+  );
 }
 
 export default Signup;
