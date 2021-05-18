@@ -1,31 +1,28 @@
 import React from 'react';
-import { 
-  Container, TitleWrapper, TitleSm, TitleBg, 
-  BoxWrapper, Box, Title, Description, More
-} from './Questions.styled';
+import { Container, Content, BoxWrapper, Box, ArrowButton } from './Questions.styled';
+import { MainHeading, SubHeading, DescriptionHeading, ButtonText } from '../../../components';
 
 function Questions() {
   const data = [
-    {question: 'Is coaching right for me?', description: 'Coaching is ideal if you’re feeling stuck and want to make a change. Offering accountability, coaching offers the support you need to take action.'},
-    {question: 'Is coaching right for me?', description: 'Coaching is ideal if you’re feeling stuck and want to make a change. Offering accountability, coaching offers the support you need to take action.'},
-    {question: 'Is coaching right for me?', description: 'Coaching is ideal if you’re feeling stuck and want to make a change. Offering accountability, coaching offers the support you need to take action.'}
+    {question: 'Life Coaching', description: 'Coaching is ideal if you’re feeling stuck and want to make a change. Offering accountability, coaching offers the support you need to take action.'},
+    {question: 'Career Coaching', description: 'Coaching is ideal if you’re feeling stuck and want to make a change. Offering accountability, coaching offers the support you need to take action.'},
+    {question: 'Executive Coaching', description: 'Coaching is ideal if you’re feeling stuck and want to make a change. Offering accountability, coaching offers the support you need to take action.'}
   ];
 
   return (
     <Container>
-      <TitleWrapper>
-        <TitleSm>WHY USE NUMOO APP?</TitleSm>
-        <TitleBg>What works for you, works for us</TitleBg>
-      </TitleWrapper>
-      <BoxWrapper>
-        {data.map((item, key) =>
-          <Box key={key}>
-            <Title>{item.question}</Title>
-            <Description>{item.description}</Description>
-            <More>Read more</More>
-          </Box>
-        )}
-      </BoxWrapper>
+      <Content>
+        <MainHeading title={"Is Coaching Right for you?"} />
+        <BoxWrapper>
+          {data.map((item, key) =>
+            <Box key={key}>
+              <SubHeading title={item.question} />
+              <DescriptionHeading title={item.description} />
+              <ArrowButton to='/user/signup'>Read more</ArrowButton>
+            </Box>
+          )}
+        </BoxWrapper>
+      </Content>
     </Container>
   )
 }

@@ -12,9 +12,10 @@ export const CardContent = styled.div`
   margin-right: 10px;
   border-radius: 4px;
   cursor: pointer;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 
   &:hover {
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   }
 `;
 

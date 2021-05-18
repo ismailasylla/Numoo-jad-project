@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { colors } from '../../../constants';
 
 export const Container = styled.div`
   width: 100%;
@@ -6,6 +7,8 @@ export const Container = styled.div`
 `;
 
 export const Text = styled.span`
-  color: #AAA;
-  font-size: 20px;
+  color: ${colors.primaryMedium};
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'Lexend';
 `;

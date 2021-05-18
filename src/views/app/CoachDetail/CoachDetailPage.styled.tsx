@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 80%;
+  width: 85%;
   margin: 0px auto;
 `;
 export const CoacheDetailWrapper = styled.div`

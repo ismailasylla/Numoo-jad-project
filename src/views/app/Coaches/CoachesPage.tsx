@@ -1,8 +1,9 @@
 import React from 'react';
 import { Card, Collapse } from "antd";
 import { Container, CoachesWrapper, CoachesBoxLeft, CoachesBoxRight } from "./CoachesPage.styled";
-import { SubTitle, CardCoach } from '../../../components';
+import { MainHeading, CardCoach } from '../../../components';
 import data from '../../../dummy/coaches';
+
 
 function Coaches(props: any): JSX.Element {
   const { Meta } = Card;
@@ -14,8 +15,8 @@ function Coaches(props: any): JSX.Element {
 
   return (
   <Container>
-    <SubTitle
-      title={"Top Numoo Coaches"}
+    <MainHeading
+      title={"Our Coaches"}
     />
 
     <CoachesWrapper>

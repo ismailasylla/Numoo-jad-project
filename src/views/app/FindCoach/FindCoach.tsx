@@ -1,13 +1,13 @@
 import React from 'react';
 import { Card, Collapse } from "antd";
 import { Container } from "./FindCoach.styled";
-import { SubTitle } from '../../../components';
+import { SubHeading } from '../../../components';
 
 function FindCoach(props: any): JSX.Element {
 
   return (
   <Container>
-    <SubTitle
+    <SubHeading
       title={"Find a Coach"}
     />
 

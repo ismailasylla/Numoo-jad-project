@@ -1,28 +1,22 @@
 import styled from "styled-components";
 import { colors } from '../../../constants';
+import { NavBtnLink } from '../../../components/buttons/ButtonText/ButtonText.styled';
 
 export const Container = styled.div`
-  width: 100%;
   background-color: white;
-  margin: 20px 0px;
-  padding: 40px 0px;
+  display: flex;
+  margin: 0px 0px;
+  padding-top: 40px;
+  padding-bottom: 35px;
 `;
 
-export const TitleWrapper = styled.div`
-  text-align: center;
-`;
-export const TitleSm = styled.div`
-  color: ${colors.primaryLight};
-`;
-export const TitleBg = styled.div`
-  color: ${colors.primaryMedium};
-  font-size: 30px;
-  font-family: 'Lexend';
-  font-weight: bold;
+export const Content = styled.div`
+  width: 85%;
+  margin: 0px auto;
 `;
 
 export const BoxWrapper = styled.div`
-  width: 80%;
+  width: 85%;
   margin: 0px auto;
   display: flex;
 
@@ -30,21 +24,27 @@ export const BoxWrapper = styled.div`
     display: block;
   }
 `;
+
+export const ArrowButton = styled(NavBtnLink)`
+`;
+
 export const Box = styled.div`
   padding: 10px;
+  cursor: pointer;
+  &:hover ${ArrowButton} {
+    &:after {
+      margin-left: 0.7em;
+    }
+  }
 `;
-export const Title = styled.div`
-  color: ${colors.primary};
-  font-weight: bold;
-  font-size: 20px;
-`;
+
 export const Description = styled.div`
   color: ${colors.primary};
   margin-top: 20px;
 `;
 
 export const More = styled.span`
-  color: ${colors.secondary};
+  color: ${colors.primaryOrange};
   text-decoration: underline;
   cursor: pointer;
   transition: 0.1s;

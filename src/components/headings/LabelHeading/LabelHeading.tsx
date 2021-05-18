@@ -1,11 +1,11 @@
 import React from 'react';
-import { Container, Text } from './SubTitle.styled';
+import { Container, Text } from './LabelHeading.styled';
 
 interface Props {
   title: string;
 }
 
-function SubTitle({ title }: Props) {
+function LabelHeading({ title }: Props) {
   return (
     <Container>
       <Text>{title}</Text>
@@ -13,4 +13,4 @@ function SubTitle({ title }: Props) {
   )
 }
 
-export default SubTitle;
+export default LabelHeading;
