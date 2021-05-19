@@ -4,6 +4,9 @@ import { useAuth } from "../../../context/AuthContext";
 import { ButtonNormal, InputText, DropDown } from "components";
 import { notify } from "utils";
 import { DropDownWrapper } from "components/inputs/DropDown/DropDown.styled";
+import DatePIcker from "components/inputs/DatePicker/DatePIcker";
+import AdSenseInput from "components/inputs/AdSenseInput/AdSenseInput";
+import { AdSenseInputWrapper } from "components/inputs/AdSenseInput/AdSenseInputWrapper.styled";
 
 function Signup(props: any) {
   const { signup } = useAuth();
@@ -55,7 +58,7 @@ function Signup(props: any) {
         </InputWrapper>
 
         <DropDownWrapper>
-          <DropDown></DropDown>
+          <DatePIcker />
         </DropDownWrapper>
         <InputText
           type={"text"}
@@ -85,7 +88,9 @@ function Signup(props: any) {
           name="password"
           ref={confirmPasswordRef}
         />
-
+        <AdSenseInputWrapper>
+          <AdSenseInput></AdSenseInput>
+        </AdSenseInputWrapper>
         <ButtonNormal
           label={loading ? "Loading..." : "Sign up"}
           fill="true"
