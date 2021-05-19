@@ -1,7 +1,13 @@
 import styled from "styled-components";
 import { colors } from '../../../constants';
-import { Select, Pagination } from "antd";
+import { Select, Pagination, Input } from "antd";
 
+
+export const LocationSearch = styled(Input.Search)`
+  width: 100%;
+  font-family: Lexend;
+  font-size: 17px;
+`;
 
 export const CategorySelect = styled(Select)`
   width: 100%;

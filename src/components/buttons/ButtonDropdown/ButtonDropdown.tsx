@@ -28,7 +28,7 @@ const ButtonDropdown: FC<Props> = ({ label, items, parentCallback }) => {
   const [dropdownLabel, setDropdownLabel ] = useState(label);
   
   return (
-    <Dropdown overlay={menu}>
+    <Dropdown overlay={menu} trigger={['click']}>
       <BtnLink size="large">
       {dropdownLabel} <DownOutlined />
       </BtnLink>
