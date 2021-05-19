@@ -1,6 +1,6 @@
-import React from 'react';
-import { Card, Input, Select } from "antd";
-import { Container, FilterInputWrapper, CoachesWrapper, CoachesBoxLeft, CoachesBoxRight, CategorySelect, CategoryOption } from "./CoachesPage.styled";
+import React, {useState} from 'react';
+import { Card, Input } from "antd";
+import { Container, FilterInputWrapper, CoachesWrapper, CoachesBoxLeft, CoachesBoxRight, CategorySelect, CategoryOption, CategoryText, CoachesPagination } from "./CoachesPage.styled";
 import { MainHeading, SubHeading, LabelHeading, CardCoach, ButtonDropdown } from '../../../components';
 import data from '../../../dummy/coaches';
 
@@ -28,6 +28,20 @@ function Coaches(props: any): JSX.Element {
 
  const dropdownItems = ["All", "Legal","Test"]
   
+ const pageSize = 6;
+ const [minValue, setMinValue ] = useState(0);
+ const [maxValue, setMaxValue ] = useState(pageSize);
+
+ function handlePageChange(e: any) {
+  if (e <= 1) {
+    setMinValue(0);
+    setMaxValue(pageSize);
+  } else {
+    setMinValue(maxValue);
+    setMaxValue(e * pageSize);
+  }
+}
+
   return (
   <Container>
     <MainHeading title={"Our Coaches"} />
@@ -39,13 +53,16 @@ function Coaches(props: any): JSX.Element {
           <FilterInputWrapper>
             <LabelHeading isGreyed="true" title={"Coaching Category"} />
             <CategorySelect
+              size="large"
+              showSearch={false}
+              showArrow={true}
               mode="multiple"
-              placeholder="Please select Columns"
+              placeholder="Any"
               maxTagCount={5}
               style={{width: '100%'}}>
-              <CategoryOption key="1" value="Life">Life</CategoryOption>
-              <CategoryOption key="2" value="Career">Career</CategoryOption>
-              <CategoryOption key="2" value="Executive">Executive</CategoryOption>
+              <CategoryOption key="1" value="life"><CategoryText>Life</CategoryText></CategoryOption>
+              <CategoryOption key="2" value="career"><CategoryText>Career</CategoryText></CategoryOption>
+              <CategoryOption key="2" value="executive"><CategoryText>Executive</CategoryText></CategoryOption>
             </CategorySelect>
 
           </FilterInputWrapper>
@@ -77,14 +94,19 @@ function Coaches(props: any): JSX.Element {
           
       </CoachesBoxLeft>
       <CoachesBoxRight>
-        {data.map((item, key) => 
-          <CardCoach
-            key={key}
-            data={item}
-          />
-        )}
+
+      {data && data.length > 0 && data.slice(minValue, maxValue).map((item, key) => 
+        <CardCoach
+          key={key}
+          data={item}
+        />
+      )}
+
+
       </CoachesBoxRight>
     </CoachesWrapper>
+    <CoachesPagination defaultCurrent={1} defaultPageSize={pageSize} total={10} onChange={handlePageChange}/>
+
 
 
   </Container>

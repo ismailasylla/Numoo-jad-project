@@ -87,6 +87,28 @@ const data = [
     numooHours: 20,
     rating: 4.9,
   },
+  {
+    id: 9,
+    name: "Awedis Keofteian",
+    short: "Executive Manager",
+    location: "Lebanon",
+    price: "$50.00",
+    tags: ["Art", "Paint", "Drawing", "Coding"],
+    experience: 5,
+    numooHours: 20,
+    rating: 4.9,
+  },
+  {
+    id: 10,
+    name: "Awedis Keofteian",
+    short: "Executive Manager",
+    location: "Lebanon",
+    price: "$50.00",
+    tags: ["Art", "Paint", "Drawing", "Coding"],
+    experience: 5,
+    numooHours: 20,
+    rating: 4.9,
+  },
 ];
 
 export default data;

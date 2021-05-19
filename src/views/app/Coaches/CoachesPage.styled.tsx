@@ -1,35 +1,31 @@
 import styled from "styled-components";
 import { colors } from '../../../constants';
-import { Select } from "antd";
+import { Select, Pagination } from "antd";
 
 
 export const CategorySelect = styled(Select)`
   width: 100%;
   font-family: Lexend;
   font-size: 17px;
-  
-  &:hover{
-    color: ${colors.primaryOrange} !important;
-    border-color: ${colors.primaryOrange} !important;
-  }
-  &:focus{
-    color: ${colors.primaryOrange} !important;
-    border-color: ${colors.primaryOrange} !important;
-  }
 `;
 export const CategoryOption = styled(Select.Option)`
   width: 100%;
   font-family: Lexend;
   font-size: 17px;
-  
-  &:hover{
-    color: ${colors.primaryOrange} !important;
-    border-color: ${colors.primaryOrange} !important;
-  }
-  &:focus{
-    color: ${colors.primaryOrange} !important;
-    border-color: ${colors.primaryOrange} !important;
-  }
+`;
+
+export const CoachesPagination = styled(Pagination)`
+display: flex;
+align-items: center;
+justify-content: flex-end;
+`;
+
+export const CategoryText = styled.span`
+  width: 100%;
+  font-family: Lexend;
+  font-size: 17px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 `;
 
 export const Container = styled.div`
@@ -40,6 +36,10 @@ export const Container = styled.div`
 
 export const FilterInputWrapper = styled.div`
   margin-bottom: 20px;
+`;
+
+export const CoachCardsWrapper = styled.div`
+margin-bottom: 40px;
 `;
 
 export const CoachesWrapper = styled.div`

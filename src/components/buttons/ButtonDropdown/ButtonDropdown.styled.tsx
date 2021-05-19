@@ -10,23 +10,13 @@ export const DropdownItems = styled(Menu)`
 export const DropdownItem = styled(Menu.Item)`
   font-family: Lexend;
   font-size: 17px;
-  padding-top: 15px;
-  padding-bottom: 15px;
 `;
 
 export const BtnLink = styled(Button)`
   width: 100%;
   display: flex;
+  font-size: 17px;
   justify-content: space-between;
   align-items: center;
   font-family: Lexend;
-  color: ${colors.secondaryTextLight} !important;
-  &:hover{
-    color: ${colors.primaryOrange} !important;
-    border-color: ${colors.primaryOrange} !important;
-  }
-  &:focus{
-    color: ${colors.primaryOrange} !important;
-    border-color: ${colors.primaryOrange} !important;
-  }
 `;
