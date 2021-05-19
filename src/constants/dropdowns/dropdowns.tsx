@@ -1,5 +1,5 @@
 const dropdowns = {
-    categories: ["Life","Career", "Executive"],
+    categories: ["Life Coaching","Career Coaching", "Executive Coaching"],
     experience: ["Any", "1 year", "2 years", "3 years", "4 years", "5 years", "6+ years"],
     genders: ["Any", "Male", "Female"],
     language: ["Any", "English", "Arabic"],
