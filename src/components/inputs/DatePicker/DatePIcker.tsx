@@ -7,9 +7,9 @@ const DatePIcker = () => {
     <>
       <DatePickerWrapper>
         <Space direction="horizontal" size={12}>
-          <DatePicker bordered={false} />
-          <DatePicker picker="month" bordered={false} />
-          <DatePicker picker="year" bordered={false} />
+          <DatePicker bordered={true} />
+          <DatePicker picker="month" bordered={true} />
+          <DatePicker picker="year" bordered={true} />
         </Space>
       </DatePickerWrapper>
     </>
