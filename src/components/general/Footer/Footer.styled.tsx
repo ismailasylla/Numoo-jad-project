@@ -19,7 +19,7 @@ export const Column = styled.div`
 
 export const Link = styled.a`
   color: #000;
-  margin: 0px 5px
+  margin: 0px 5px;
 `;
 
 export const Logo = styled.img`
