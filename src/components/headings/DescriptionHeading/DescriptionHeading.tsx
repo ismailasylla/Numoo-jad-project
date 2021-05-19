@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Text } from './DescriptionHeading.styled';
+import { Text } from './DescriptionHeading.styled';
 
 interface Props {
   title: string;
@@ -8,9 +8,7 @@ interface Props {
 
 function DescriptionHeading({ title, isGreyed }: Props) {
   return (
-    <Container>
-      <Text isGreyed={isGreyed}>{title}</Text>
-    </Container>
+    <Text isGreyed={isGreyed}>{title}</Text>
   )
 }
 

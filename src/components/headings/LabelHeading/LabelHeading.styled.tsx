@@ -12,7 +12,7 @@ interface TextProps {
 
 export const Text = styled.span<TextProps>`
   color ${props => props.isGreyed ? `${colors.secondaryText}` : `${colors.primaryLight}`};
-  font-size: 20px;
-  font-weight: 500;
+  font-size: 18.5px;
+  font-weight: 600;
   font-family: 'Lexend';
 `;

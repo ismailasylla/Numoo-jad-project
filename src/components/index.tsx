@@ -19,6 +19,7 @@ export {
   SubHeading,
   LabelHeading,
   DescriptionHeading,
+  IconHeading,
 } from './headings';
 
 export {

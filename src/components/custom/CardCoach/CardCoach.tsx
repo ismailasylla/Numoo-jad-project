@@ -5,6 +5,7 @@ import { CoachShortProfile } from 'components';
 
 interface CoachProps {
   id: number;
+  img: string;
   experience: number;
   numooHours: number;
   rating: number;
@@ -13,6 +14,8 @@ interface CoachProps {
   location: string;
   price: string;
   tags: Array<string>
+  categories: Array<string>;
+  languages: Array<string>;
 }
 interface Props {
   data: CoachProps
@@ -26,9 +29,12 @@ function CardCoach({ data }: Props) {
       <CardContent onClick={() => history.push(`/app/coach/${data.id}`)}>
 
         <CoachShortProfile
+          pic={data.img}
           name={data.name}
           about={data.short}
           location={data.location}
+          categories={data.categories}
+          languages={data.languages}
         />
 
         <div>

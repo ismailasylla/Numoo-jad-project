@@ -38,6 +38,7 @@ export const Container = styled.div`
   width: 85%;
   margin: 0px auto;
   margin-top: 17vh;
+  margin-bottom: 40px;
 `;
 
 export const FilterInputWrapper = styled.div`
@@ -50,6 +51,7 @@ margin-bottom: 40px;
 
 export const CoachesWrapper = styled.div`
   display: flex;
+  justify-content: space-between;
   min-height: 600px;
 `;
 export const CoachesBoxLeft = styled.div`
@@ -59,6 +61,6 @@ export const CoachesBoxLeft = styled.div`
 
 `;
 export const CoachesBoxRight = styled.div`
-  width: 75%;
+  width: 73%;
   padding: 10px 0px 0px 10px;
 `;

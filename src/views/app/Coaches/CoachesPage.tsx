@@ -47,7 +47,7 @@ function Coaches(props: any): JSX.Element {
           <SubHeading isGreyed="true" title={"Preferences"} />
 
           <FilterInputWrapper>
-            <LabelHeading isGreyed="true" title={"Coaching Category"} />
+            <LabelHeading isGreyed="true" title={"Category"} />
             <CategorySelect
               size="large"
               showSearch={false}
@@ -55,7 +55,7 @@ function Coaches(props: any): JSX.Element {
               mode="multiple"
               placeholder="Any"
               onChange={handleCategory}
-              style={{width: '100%'}}>
+              >
 
               {dropdowns.categories.map((item, key) => 
                 <CategoryOption key={key} value={item}><CategoryText>{item}</CategoryText></CategoryOption>
@@ -75,7 +75,18 @@ function Coaches(props: any): JSX.Element {
 
           <FilterInputWrapper>
             <LabelHeading isGreyed="true" title={"Location"} />
-            <LocationSearch placeholder="Search location" size="large" onSearch={onSearch} />
+            <CategorySelect
+              showSearch
+              size="large"
+              showArrow={true}
+              placeholder="Any"
+              onChange={handleCategory}
+              >
+
+              {dropdowns.locations.map((item, key) => 
+                <CategoryOption key={key} value={item}><CategoryText>{item}</CategoryText></CategoryOption>
+              )}
+            </CategorySelect>
           </FilterInputWrapper>
 
           <FilterInputWrapper>
@@ -100,6 +111,7 @@ function Coaches(props: any): JSX.Element {
 
       </CoachesBoxRight>
     </CoachesWrapper>
+    <br />
     <CoachesPagination defaultCurrent={1} defaultPageSize={pageSize} total={data.length} onChange={handlePageChange}/>
   </Container>
   )
