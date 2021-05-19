@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { NavBtnLink, NavBtn } from './ButtonText.styled';
+import { BtnLink, Btn } from './ButtonText.styled';
 
 interface Props {
   to: string;
@@ -9,14 +9,14 @@ interface Props {
 
 const ButtonText: FC<Props> = ({ to, label, isArrow }) => {
   return (
-    <NavBtn>
-      <NavBtnLink
+    <Btn>
+      <BtnLink
         to={to}
         isArrow={isArrow}
       >
         {label}
-      </NavBtnLink>
-    </NavBtn>
+      </BtnLink>
+    </Btn>
   )
 }
 

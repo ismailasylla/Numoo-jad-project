@@ -3,12 +3,13 @@ import { Container, Text } from './LabelHeading.styled';
 
 interface Props {
   title: string;
+  isGreyed?: string;
 }
 
-function LabelHeading({ title }: Props) {
+function LabelHeading({ title, isGreyed }: Props) {
   return (
     <Container>
-      <Text>{title}</Text>
+      <Text isGreyed={isGreyed}>{title}</Text>
     </Container>
   )
 }

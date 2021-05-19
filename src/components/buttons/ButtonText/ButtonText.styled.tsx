@@ -3,11 +3,11 @@ import { colors } from '../../../constants';
 import { NavLink as Link } from 'react-router-dom';
 import rightArrow from './../../../assets/images/right_arrow.svg';
 
-interface NavBtnLinkProps {
+interface BtnLinkProps {
   isArrow?: string;
 }
 
-export const NavBtn = styled.nav`
+export const Btn = styled.nav`
   display: flex;
   align-items: center;
 
@@ -16,7 +16,7 @@ export const NavBtn = styled.nav`
   }
 `;
 
-export const NavBtnLink = styled(Link)<NavBtnLinkProps>`
+export const BtnLink = styled(Link)<BtnLinkProps>`
   border-radius: 4px;
   padding: 10px 30px;
   font-size: 20px;

@@ -18,7 +18,7 @@ function Header() {
           <ButtonNav
             to='/app/coaches'
             label='Find a coach'
-            isOrange="true"
+            isorange="true"
             mright='10px'
           />
           <ButtonNav

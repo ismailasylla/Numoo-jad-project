@@ -3,12 +3,13 @@ import { Container, Text } from './SubHeading.styled';
 
 interface Props {
   title: string;
+  isGreyed?: string;
 }
 
-function SubHeading({ title }: Props) {
+function SubHeading({ title, isGreyed }: Props) {
   return (
     <Container>
-      <Text>{title}</Text>
+      <Text isGreyed={isGreyed}>{title}</Text>
     </Container>
   )
 }

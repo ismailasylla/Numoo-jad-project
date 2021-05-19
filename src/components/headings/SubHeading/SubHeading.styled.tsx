@@ -3,11 +3,15 @@ import { colors } from '../../../constants';
 
 export const Container = styled.div`
   width: 100%;
-  padding: 20px 0px;
+  margin-bottom: 20px;
 `;
 
-export const Text = styled.span`
-  color: ${colors.primaryMedium};
+interface TextProps {
+  isGreyed?: string;
+}
+
+export const Text = styled.span<TextProps>`
+  color ${props => props.isGreyed ? `${colors.secondaryText}` : `${colors.primaryLight}`};
   font-size: 30px;
   font-weight: 500;
   font-family: 'Lexend';

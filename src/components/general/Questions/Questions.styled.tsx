@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { colors } from '../../../constants';
-import { NavBtnLink } from '../../../components/buttons/ButtonText/ButtonText.styled';
+import { BtnLink } from '../../../components/buttons/ButtonText/ButtonText.styled';
 
 export const Container = styled.div`
   background-color: white;
@@ -25,7 +25,7 @@ export const BoxWrapper = styled.div`
   }
 `;
 
-export const ArrowButton = styled(NavBtnLink)`
+export const ArrowButton = styled(BtnLink)`
 `;
 
 export const Box = styled.div`

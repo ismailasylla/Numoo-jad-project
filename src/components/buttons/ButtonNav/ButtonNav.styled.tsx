@@ -6,7 +6,7 @@ interface NavBtnLinkProps {
   fill?: string;
   mleft?: string;
   mright?: string;
-  isOrange?: string;
+  isorange?: string;
 }
 
 export const NavBtn = styled.nav`
@@ -22,9 +22,9 @@ export const NavBtnLink = styled(Link)<NavBtnLinkProps>`
   border-radius: 4px;
   padding: 10px 30px;
   font-size: 20px;
-  background: ${props => props.isOrange ? `${colors.primaryOrange}` : props.fill ? `${colors.primaryMedium}` : '#FFF'};
-  color: ${props => props.isOrange ? '#FFF' : props.fill ? '#FFF' : `${colors.primaryMedium}`};
-  border: ${props => props.isOrange ? 'none' : props.fill ? 'none' : `1px solid ${colors.primaryMedium}`};
+  background: ${props => props.isorange ? `${colors.primaryOrange}` : props.fill ? `${colors.primaryMedium}` : '#FFF'};
+  color: ${props => props.isorange ? '#FFF' : props.fill ? '#FFF' : `${colors.primaryMedium}`};
+  border: ${props => props.isorange ? 'none' : props.fill ? 'none' : `1px solid ${colors.primaryMedium}`};
   font-weight: 500;
   font-family: Lexend;
   outline: none;
@@ -36,8 +36,8 @@ export const NavBtnLink = styled(Link)<NavBtnLinkProps>`
 
   &:hover {
     transition: all 0.2s ease-in-out;
-    color: ${props => props.isOrange ? '#FFF' : props => props.fill ? '#FFF' : `${colors.primaryOrange}`};
-    background: ${props => props.isOrange ? `${colors.primaryOrangeDarkened}` : props.fill ? `${colors.primaryMediumDarkened}` : '#FFF'};
-    border: ${props => props.isOrange ? 'none' : props.fill ? 'none' : `1px solid ${colors.primaryOrange}`};
+    color: ${props => props.isorange ? '#FFF' : props => props.fill ? '#FFF' : `${colors.primaryOrange}`};
+    background: ${props => props.isorange ? `${colors.primaryOrangeDarkened}` : props.fill ? `${colors.primaryMediumDarkened}` : '#FFF'};
+    border: ${props => props.isorange ? 'none' : props.fill ? 'none' : `1px solid ${colors.primaryOrange}`};
   }
 `;
