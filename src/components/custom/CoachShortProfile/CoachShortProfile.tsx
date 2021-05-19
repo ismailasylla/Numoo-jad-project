@@ -1,6 +1,6 @@
 import React from 'react';
-import { Container, CardHeader, Avatar, About, Location } from './CoachShortProfile.styled';
-import { LabelHeading, IconHeading } from '../../../components';
+import { Container, CardHeader, Avatar, About } from './CoachShortProfile.styled';
+import { LabelHeading, IconHeading } from '../..';
 import { images } from '../../../constants';
 
 interface Props {

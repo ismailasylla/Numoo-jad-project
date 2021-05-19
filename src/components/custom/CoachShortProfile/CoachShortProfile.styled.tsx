@@ -22,8 +22,3 @@ export const CardHeader = styled.div`
   margin-top: 5px;
   margin-left: 15px;
 `;
-
-export const Location = styled(About)`
-  display: inline;
-  font-size: 16px;
-`;

@@ -1,9 +1,13 @@
 import styled from "styled-components";
 import { colors } from '../../../constants';
 
-export const Container = styled.div`
+interface ContainerProps {
+  center?: string;
+}
+export const Container = styled.div<ContainerProps>`
   width: 100%;
   margin-bottom: 5px;
+  text-align: ${props => props.center ? `center` : `start`};
 `;
 
 interface TextProps {

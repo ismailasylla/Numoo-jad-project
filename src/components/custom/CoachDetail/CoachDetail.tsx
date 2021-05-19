@@ -5,11 +5,7 @@ import { CoachShortProfile } from 'components';
 function CoachDetail() {
   return (
     <Container>
-      <CoachShortProfile
-        name={'Awedis Keofteian'}
-        about={'Short text about me'}
-        location={'Lebanon'}
-      />
+      
 
       <div style={{padding: '20px 20px', color: '#AAA'}}>
         <p>Some long description about the coach, Some long description about the coach, Some long description about the coach, Some long description about the coach, 
