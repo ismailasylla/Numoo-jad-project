@@ -10,7 +10,7 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.div`
-  width: 80%;
+  width: 85%;
   margin: 0px auto;
 `;
 
@@ -35,7 +35,7 @@ export const Type = styled.span`
 export const TitleBg = styled.div`
   color: ${colors.primaryMedium};
   font-size: 20px;
-  /* font-family: 'Lexend', serif; */
+  font-family: 'Lexend'
   /* font-weight: bold; */
   text-align: right;
   margin-bottom: 10px;

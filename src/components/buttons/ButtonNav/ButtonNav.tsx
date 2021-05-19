@@ -7,9 +7,10 @@ interface Props {
   fill?: string;
   mleft?: string;
   mright?: string;
+  isorange?: string;
 }
 
-const TopNav: FC<Props> = ({ to, label, fill, mleft, mright }) => {
+const ButtonNav: FC<Props> = ({ to, label, fill, mleft, mright, isorange }) => {
   return (
     <NavBtn>
       <NavBtnLink
@@ -17,6 +18,7 @@ const TopNav: FC<Props> = ({ to, label, fill, mleft, mright }) => {
         fill={fill}
         mleft={mleft}
         mright={mright}
+        isorange={isorange}
       >
         {label}
       </NavBtnLink>
@@ -24,4 +26,4 @@ const TopNav: FC<Props> = ({ to, label, fill, mleft, mright }) => {
   )
 }
 
-export default TopNav;
+export default ButtonNav;

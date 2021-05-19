@@ -1,18 +1,37 @@
 import React from 'react';
-import { Container, Number, Label } from './CoachStatistics.styled';
+import { StatisticTypeContainer, CenteredContainer, Tags, Tag, StatisticType } from './CoachStatistics.styled';
+import { LabelHeading } from 'components';
 
-function CoachStatistics() {
+interface Props {
+  numooHours: string;
+  experience: string;
+  rating: number;
+  tags: Array<string>;
+}
+
+function CoachStatistics({ numooHours, experience, rating, tags }: Props) {
   return (
-    <Container>
-      <div>
-        <Number>40</Number>
-        <Label>Total Jobs</Label>
-      </div>
-      <div style={{marginLeft: '20px'}}>
-        <Number>502</Number>
-        <Label>Total Hours</Label>
-      </div>
-    </Container>
+    <div>
+      <CenteredContainer>
+        <LabelHeading isGreyed="true" center="true" title={numooHours} />
+        <LabelHeading isGreyed="true" center="true" title={experience} />
+        <LabelHeading isGreyed="true" center="true" title={experience} />
+      </CenteredContainer>
+
+      <StatisticTypeContainer>
+        <StatisticType>in numoo</StatisticType>
+        <StatisticType>of experience</StatisticType>
+        <StatisticType>rating</StatisticType>
+      </StatisticTypeContainer>
+
+      <Tags>
+        {tags.map((item, key) =>
+          <Tag
+            key={key}
+          >{item}</Tag>
+        )}
+      </Tags>
+    </div>
   )
 }
 

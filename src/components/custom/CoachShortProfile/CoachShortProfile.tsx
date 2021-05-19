@@ -1,23 +1,31 @@
 import React from 'react';
-import { Avatar } from 'antd';
-import { Container, CardHeader, Name, About, Location } from './CoachShortProfile.styled';
+import { Container, CardHeader, Avatar, About } from './CoachShortProfile.styled';
+import { LabelHeading, IconHeading } from '../..';
+import { images } from '../../../constants';
 
 interface Props {
+  pic: string;
   name: string;
   about: string;
   location: string;
+  categories: Array<string>;
+  languages: Array<string>;
 }
 
-function CoachShortProfile({ name, about, location }: Props) {
+function CoachShortProfile({ pic, name, about, location, categories, languages }: Props) {
   return (
     <Container>
       <Avatar
-        size={64}
-      >A</Avatar>
+        src={pic}
+      ></Avatar>
       <CardHeader>
-        <Name>{name}</Name>
+        <LabelHeading isGreyed="true" title={name} />
         <About>{about}</About>
-        <Location>{location}</Location>
+
+        <IconHeading img={images.LOCATION} title={location}></IconHeading>
+        <IconHeading img={images.LANGUAGE} title={languages.join(", ")}></IconHeading>
+        <IconHeading img={images.CATEGORIES} title={categories.join(", ")}></IconHeading>
+
       </CardHeader>
     </Container>
   )

@@ -6,7 +6,7 @@ export const Container = styled.div`
 `;
 
 export const FooterWrapper = styled.div`
-  width: 80%;
+  width: 85%;
   margin: 0 auto;
   padding: 20px 0px;
   display: flex;

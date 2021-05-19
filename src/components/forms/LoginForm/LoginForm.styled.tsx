@@ -26,7 +26,7 @@ export const NotMember = styled.span`
   color: #aaa;
 `;
 export const Link = styled.span`
-  color: ${colors.secondary};
+  color: ${colors.primaryOrange};
   text-decoration: underline;
   cursor: pointer;
 `;

@@ -1,11 +1,11 @@
 import React from 'react';
-import { Container, Text } from './SubTitle.styled';
+import { Container, Text } from './MainHeading.styled';
 
 interface Props {
   title: string;
 }
 
-function SubTitle({ title }: Props) {
+function MainHeading({ title }: Props) {
   return (
     <Container>
       <Text>{title}</Text>
@@ -13,4 +13,4 @@ function SubTitle({ title }: Props) {
   )
 }
 
-export default SubTitle;
+export default MainHeading;

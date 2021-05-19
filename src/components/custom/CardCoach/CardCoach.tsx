@@ -1,15 +1,22 @@
 import React from 'react';
-import { Container, CardContent, Footer, Tag } from './CardCoach.styled';
+import { Container, CardContent } from './CardCoach.styled';
 import { useHistory } from "react-router-dom";
-import { CoachShortProfile } from 'components';
+import { CoachShortProfile, CoachStatistics } from 'components';
+
 
 interface CoachProps {
   id: number;
+  img: string;
+  experience: string;
+  numooHours: string;
+  rating: number;
   name: string;
   short: string;
   location: string;
   price: string;
   tags: Array<string>
+  categories: Array<string>;
+  languages: Array<string>;
 }
 interface Props {
   data: CoachProps
@@ -22,23 +29,21 @@ function CardCoach({ data }: Props) {
     <Container>
       <CardContent onClick={() => history.push(`/app/coach/${data.id}`)}>
 
-      <CoachShortProfile
-        name={data.name}
-        about={data.short}
-        location={data.location}
-      />
-
-      <div>
-        <h2>{data.price} /hr</h2>
-      </div>
-
-      <Footer>
-        {data.tags.map((item, key) =>
-          <Tag
-            key={key}
-          >{item}</Tag>
-        )}
-      </Footer>
+        <CoachShortProfile
+          pic={data.img}
+          name={data.name}
+          about={data.short}
+          location={data.location}
+          categories={data.categories}
+          languages={data.languages}
+        />
+        <CoachStatistics
+          numooHours={data.numooHours}
+          experience={data.experience}
+          rating={data.rating}
+          tags={data.tags}
+        />
+        
 
       </CardContent>
     </Container>

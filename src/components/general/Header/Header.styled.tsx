@@ -2,41 +2,40 @@ import styled from 'styled-components';
 import { colors } from '../../../constants';
 
 export const Container = styled.div`
-  background-color: ${colors.primaryMedium};
+  background-color: ${colors.secondaryTextLight};
   padding: 40px 0px;
   position: relative;
   overflow: hidden;
-  height: 400px;
+  height: 100vh;
 `;
 
 export const Content = styled.div`
-  width: 80%;
+  width: 85%;
   margin: 0px auto; 
+  margin-top: 18vh;
 `;
 
 export const TitleBg = styled.div`
-  color: white;
-  font-size: 30px;
+  font-size: 60px;
+  font-weight: 450;
   font-family: 'Lexend';
-  font-weight: bold;
-`;
-export const TitleSm = styled.div`
-  color: #EEE;
+  color: white;
+  line-height: 70px;
 `;
 
-export const Circle = styled.div`
-  border: 20px solid ${colors.secondary};
-  border-radius: 50%;
-  width: 200px;
-  height: 200px;
-  position: absolute;
-  bottom: -150px;
+export const TitleSm = styled.div`
+  color: white;
+  font-size: 28px;
+  font-weight: 300;
+  font-family: 'Lexend';
+  line-height: 38px;
 `;
-export const CircleBig = styled.div`
-  border: 40px solid ${colors.primary};
-  border-radius: 50%;
-  width: 400px;
-  height: 400px;
-  position: absolute;
-  top: -180px; right: 100px;
+export const TitleSmWrapper = styled.div`
+  margin-top: 40px;
 `;
+
+export const BtnWrapper = styled.div`
+  display: flex;
+  margin-top: 30px;
+`;
+

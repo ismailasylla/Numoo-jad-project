@@ -2,8 +2,17 @@ import styled from 'styled-components';
 import { colors } from '../../../constants';
 import { NavLink as Link } from 'react-router-dom';
 
+export const NavContainer = styled.div`
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+  color: white;
+  `;
+
 export const Nav = styled.nav`
-  background: #FFF;
+  background-color: transparent;
   height: 80px;
   display: flex;
   justify-content: space-between;
@@ -23,7 +32,7 @@ export const NavLink = styled(Link)`
   cursor: pointer;
 
   &.active {
-    color: ${colors.secondary};
+    color: ${colors.primaryOrange};
   }
 `;
 

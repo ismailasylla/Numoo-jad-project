@@ -18,5 +18,5 @@ export const Lang = styled.span`
 export const ActiveLang = styled(Lang)`
   cursor: pointer;
   padding-right: 5px;
-  color: ${colors.secondary};
+  color: ${colors.primaryOrange};
 `;

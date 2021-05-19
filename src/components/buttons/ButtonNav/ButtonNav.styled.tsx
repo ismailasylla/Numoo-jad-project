@@ -6,6 +6,7 @@ interface NavBtnLinkProps {
   fill?: string;
   mleft?: string;
   mright?: string;
+  isorange?: string;
 }
 
 export const NavBtn = styled.nav`
@@ -20,9 +21,12 @@ export const NavBtn = styled.nav`
 export const NavBtnLink = styled(Link)<NavBtnLinkProps>`
   border-radius: 4px;
   padding: 10px 30px;
-  background: ${props => props.fill ? `${colors.primaryMedium}` : '#FFF'};
-  color: ${props => props.fill ? '#FFF' : `${colors.primaryMedium}`};
-  border: ${props => props.fill ? 'none' : `1px solid ${colors.primaryMedium}`};
+  font-size: 20px;
+  background: ${props => props.isorange ? `${colors.primaryOrange}` : props.fill ? `${colors.primaryMedium}` : '#FFF'};
+  color: ${props => props.isorange ? '#FFF' : props.fill ? '#FFF' : `${colors.primaryMedium}`};
+  border: ${props => props.isorange ? 'none' : props.fill ? 'none' : `1px solid ${colors.primaryMedium}`};
+  font-weight: 500;
+  font-family: Lexend;
   outline: none;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
@@ -30,8 +34,10 @@ export const NavBtnLink = styled(Link)<NavBtnLinkProps>`
   margin-left: ${props => props.mleft && props.mleft};
   margin-right: ${props => props.mright && props.mright};
 
-  &.hover {
+  &:hover {
     transition: all 0.2s ease-in-out;
-    color: ${colors.primaryMedium} !important;
+    color: ${props => props.isorange ? '#FFF' : props => props.fill ? '#FFF' : `${colors.primaryOrange}`};
+    background: ${props => props.isorange ? `${colors.primaryOrangeDarkened}` : props.fill ? `${colors.primaryMediumDarkened}` : '#FFF'};
+    border: ${props => props.isorange ? 'none' : props.fill ? 'none' : `1px solid ${colors.primaryOrange}`};
   }
 `;

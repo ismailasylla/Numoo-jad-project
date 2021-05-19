@@ -1,18 +1,26 @@
 export {
   TopNav,
   Footer,
-  SubTitle,
   Questions,
   LangSwitch,
-  Image,
   CoachTypes,
   Header
 } from './general';
 
 export {
   ButtonNormal,
-  ButtonNav
+  ButtonNav,
+  ButtonText,
+  ButtonDropdown,
 } from './buttons';
+
+export {
+  MainHeading,
+  SubHeading,
+  LabelHeading,
+  DescriptionHeading,
+  IconHeading,
+} from './headings';
 
 export {
   DropDown,

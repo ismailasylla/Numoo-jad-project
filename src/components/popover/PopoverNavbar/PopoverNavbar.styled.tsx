@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Divider } from 'antd';
 // import { colors } from '../../../constants';
 
 export const PopWrapper = styled.div`
@@ -24,4 +25,8 @@ export const PopLink = styled.div`
   &:hover {
     color: #444;
   }
+`;
+
+export const PopDivider = styled(Divider)`
+margin: 3px;
 `;
