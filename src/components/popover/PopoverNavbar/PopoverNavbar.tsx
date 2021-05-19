@@ -1,5 +1,5 @@
 import React from 'react';
-import { PopWrapper, UserName, PopContent, PopLink } from './PopoverNavbar.styled';
+import { PopWrapper, UserName, PopContent, PopLink, PopDivider } from './PopoverNavbar.styled';
 import { Popover, Avatar, notification } from 'antd';
 import { useAuth } from "context/AuthContext";
 import { capitalizeFirstLetter } from "utils";
@@ -25,6 +25,7 @@ function PopoverNavbar() {
     <PopContent>
       <PopLink>Dashboard</PopLink>
       <PopLink>Settings</PopLink>
+      <PopDivider />
       <PopLink onClick={() => signoutHandler()}>Log out</PopLink>
     </PopContent>
 

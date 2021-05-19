@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Content, Type, TitleBg } from './CoachTypes.styled';
-import { SubHeading } from '../../../components';
+import { SubHeading } from '../..';
 
 function CoachTypes() {
   const data = ['Career coaching', 'Confidence', 'Creative coaching', 'Family', 'Finances', 'Health coaching', 'Relationships', 'Spirituality', 'Retirement'];
