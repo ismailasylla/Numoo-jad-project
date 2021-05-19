@@ -9,6 +9,7 @@ import {
 import { useAuth } from "context/AuthContext";
 import { ButtonNormal, InputText } from "components";
 import { notify } from "utils";
+import FormTitle from "../FormTitle/FormTitle";
 
 function LoginForm(props: any) {
   const { signin } = useAuth();
@@ -36,6 +37,7 @@ function LoginForm(props: any) {
 
   return (
     <Container>
+      <FormTitle title={"Log in"} />
       <FormWrapper>
         <InputText
           type={"text"}

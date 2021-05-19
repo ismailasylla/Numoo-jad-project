@@ -7,6 +7,7 @@ import { DropDownWrapper } from "components/inputs/DropDown/DropDown.styled";
 import DatePIcker from "components/inputs/DatePicker/DatePIcker";
 import AdSenseInput from "components/inputs/AdSenseInput/AdSenseInput";
 import { AdSenseInputWrapper } from "components/inputs/AdSenseInput/AdSenseInputWrapper.styled";
+import FormTitle from "../FormTitle/FormTitle";
 
 function Signup(props: any) {
   const { signup } = useAuth();
@@ -39,6 +40,7 @@ function Signup(props: any) {
 
   return (
     <Container>
+      <FormTitle title={"Sign up"} />
       <FormWrapper>
         <InputWrapper>
           <InputText
