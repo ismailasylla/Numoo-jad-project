@@ -8,6 +8,7 @@ import DatePIcker from "components/inputs/DatePicker/DatePIcker";
 import AdSenseInput from "components/inputs/AdSenseInput/AdSenseInput";
 import { AdSenseInputWrapper } from "components/inputs/AdSenseInput/AdSenseInputWrapper.styled";
 import FormTitle from "../FormTitle/FormTitle";
+import PickerTitleSelect from "../PickerTitleSelect/PickerTitleSelect";
 
 function Signup(props: any) {
   const { signup } = useAuth();
@@ -91,6 +92,7 @@ function Signup(props: any) {
           ref={confirmPasswordRef}
         />
         <AdSenseInputWrapper>
+          <PickerTitleSelect title={"Source"} />
           <AdSenseInput></AdSenseInput>
         </AdSenseInputWrapper>
         <ButtonNormal
