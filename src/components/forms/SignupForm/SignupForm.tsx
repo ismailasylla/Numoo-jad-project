@@ -1,8 +1,9 @@
 import React, { useState, useRef } from "react";
 import { Container, FormWrapper, InputWrapper } from "./SignupForm.styled";
 import { useAuth } from "../../../context/AuthContext";
-import { ButtonNormal, InputText } from "components";
+import { ButtonNormal, InputText, DropDown } from "components";
 import { notify } from "utils";
+import { DropDownWrapper } from "components/inputs/DropDown/DropDown.styled";
 
 function Signup(props: any) {
   const { signup } = useAuth();
@@ -52,6 +53,10 @@ function Signup(props: any) {
             ref={lastNameRef}
           />
         </InputWrapper>
+
+        <DropDownWrapper>
+          <DropDown></DropDown>
+        </DropDownWrapper>
         <InputText
           type={"text"}
           label={"Email"}
@@ -80,8 +85,9 @@ function Signup(props: any) {
           name="password"
           ref={confirmPasswordRef}
         />
+
         <ButtonNormal
-          label={loading ? "Loading..." : "REGISTER"}
+          label={loading ? "Loading..." : "Sign up"}
           fill="true"
           onClick={() => onSubmit()}
           disabled={loading}

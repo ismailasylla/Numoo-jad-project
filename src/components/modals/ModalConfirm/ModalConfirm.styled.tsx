@@ -1,5 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 // import { colors } from '../../../constants';
 
-export const ModalWrapper = styled.div`
-`;
+export const ModalWrapper = styled.div``;
