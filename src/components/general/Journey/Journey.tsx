@@ -2,25 +2,32 @@ import React from "react";
 import {
   JourneyWrapper,
   JourneyTitle,
-  JourneyIcon,
   JourneyDescription,
+  JourneyIconWrapper,
 } from "./Journey.styled";
-import { images } from "../../../constants";
+import { JourneyIconMatch as ICON_MATCH } from "../Journey/Journey.styled";
+import { JourneyIconMeat as ICON_MEAT } from "../Journey/Journey.styled";
+import { JourneyIconGrow as ICON_GROW } from "../Journey/Journey.styled";
+
+import ButtonStartJourney from "components/buttons/ButtonStartJourney/ButtonStartJourney";
 
 function Journey() {
+  // const ICON_MATCH = JourneyIconMatch.default;
+  // const ICON_MEAT = JourneyIconMeat.default;
+  // const ICON_GROW = JourneyIconGrow.default;
   const data = [
     {
-      img: images.LIFE_ICON,
+      ico: <ICON_MATCH title="M" />,
       title: "Match",
       description: "Match to a coach suited to your coaching needs.",
     },
     {
-      img: images.CAREER_ICON,
+      ico: <ICON_MEAT title="M" />,
       title: "Meat",
       description: "Meat with your coach for as many as you want.",
     },
     {
-      img: images.EXEC_ICON,
+      ico: <ICON_GROW title="G" />,
       title: "Grow",
       description: "Grow to acheive your goals as maximize your potential.",
     },
@@ -30,12 +37,13 @@ function Journey() {
       <JourneyWrapper>
         {data.map((item, key) => (
           <div key={key}>
-            <JourneyIcon src={item.img}></JourneyIcon>
+            <JourneyIconWrapper>{item.ico}</JourneyIconWrapper>
             <JourneyTitle>{item.title}</JourneyTitle>
             <JourneyDescription>{item.description}</JourneyDescription>
           </div>
         ))}
       </JourneyWrapper>
+      <ButtonStartJourney></ButtonStartJourney>
     </div>
   );
 }

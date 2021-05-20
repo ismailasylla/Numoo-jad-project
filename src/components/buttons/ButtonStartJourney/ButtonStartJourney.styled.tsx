@@ -1,8 +1,10 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: auto;
-  margin: auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
 `;
 
 export const Button = styled.button`
@@ -62,7 +64,7 @@ export const Button = styled.button`
   }
 
   :hover::before,
-  button.btn:hover::after {
+  :hover::after {
     top: 0;
     height: 100%;
     width: 100%;
