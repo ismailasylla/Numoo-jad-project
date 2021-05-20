@@ -6,9 +6,6 @@ import { dropdowns } from '../../../constants';
 
 function Coaches(props: any): JSX.Element {
   //Preferences Logic
-  function onSearch(e: any) {
-    console.log('onSearch item', e);
-  }
   function handleCategory(e: any) {
     console.log('handleCategory item', e);
   }
@@ -17,6 +14,9 @@ function Coaches(props: any): JSX.Element {
   }
   function handleLanguage(e: any) {
     console.log('handleLanguage item', e);
+  }
+  function handleLocation(e: any) {
+    console.log('handleLocation item', e);
   }
   function handleGender(e: any) {
     console.log('handleGender item', e);
@@ -80,7 +80,7 @@ function Coaches(props: any): JSX.Element {
               size="large"
               showArrow={true}
               placeholder="Any"
-              onChange={handleCategory}
+              onChange={handleLocation}
               >
 
               {dropdowns.locations.map((item, key) => 

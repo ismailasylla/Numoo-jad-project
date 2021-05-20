@@ -1,5 +1,6 @@
 /* eslint @typescript-eslint/no-var-requires: "off" */
 const coachPic = require('./coach-pic.png').default;
+const helloVideo = require('./hello.mp4').default;
 
 const data = [
   {
@@ -15,6 +16,7 @@ const data = [
     experience: "5+",
     numooHours: "50+",
     rating: 4.9,
+    video: helloVideo
   },
   {
     id: 2,
@@ -29,6 +31,7 @@ const data = [
     experience: "5+",
     numooHours: "50+",
     rating: 4.9,
+    video: helloVideo
   },
   {
     id: 3,
@@ -43,6 +46,7 @@ const data = [
     experience: "5+",
     numooHours: "50+",
     rating: 4.9,
+    video: helloVideo
   },
   {
     id: 4,
@@ -57,6 +61,7 @@ const data = [
     experience: "5+",
     numooHours: "50+",
     rating: 4.9,
+    video: helloVideo
   },
   {
     id: 5,
@@ -71,6 +76,7 @@ const data = [
     experience: "5+",
     numooHours: "50+",
     rating: 4.9,
+    video: helloVideo
   },
   {
     id: 6,
@@ -85,6 +91,7 @@ const data = [
     experience: "5+",
     numooHours: "50+",
     rating: 4.9,
+    video: helloVideo
   },
   {
     id: 7,
@@ -99,6 +106,7 @@ const data = [
     experience: "5+",
     numooHours: "50+",
     rating: 4.9,
+    video: helloVideo
   },
   {
     id: 8,
@@ -113,6 +121,7 @@ const data = [
     experience: "5+",
     numooHours: "50+",
     rating: 4.9,
+    video: helloVideo
   },
   {
     id: 9,
@@ -127,6 +136,7 @@ const data = [
     experience: "5+",
     numooHours: "50+",
     rating: 4.9,
+    video: helloVideo
   },
   {
     id: 10,
@@ -141,6 +151,7 @@ const data = [
     experience: "5+",
     numooHours: "50+",
     rating: 4.9,
+    video: helloVideo
   },
 ];
 

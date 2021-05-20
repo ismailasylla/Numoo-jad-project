@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { colors } from "../../../constants";
 
-
 export const CenteredContainer = styled.div`
   margin-top: 20px;
   display: flex;
