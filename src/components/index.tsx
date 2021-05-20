@@ -44,5 +44,6 @@ export {
   CardCoach,
   CoachDetail,
   CoachShortProfile,
-  CoachStatistics
+  CoachStatistics,
+  CoachBooking
 } from './custom';
