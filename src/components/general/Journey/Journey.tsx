@@ -12,9 +12,6 @@ import { JourneyIconGrow as ICON_GROW } from "../Journey/Journey.styled";
 import ButtonStartJourney from "components/buttons/ButtonStartJourney/ButtonStartJourney";
 
 function Journey() {
-  // const ICON_MATCH = JourneyIconMatch.default;
-  // const ICON_MEAT = JourneyIconMeat.default;
-  // const ICON_GROW = JourneyIconGrow.default;
   const data = [
     {
       ico: <ICON_MATCH title="M" />,

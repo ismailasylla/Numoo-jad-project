@@ -15,6 +15,8 @@ const colors = {
   secondaryText: "#2D263B",
   // Light Grey used for text in secondary pages
   secondaryTextLight: "#5F5F5F",
+
+  btnBackground: "#9160ef",
 };
 
 export default colors;
