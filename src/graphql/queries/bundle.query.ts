@@ -1,7 +1,7 @@
 import gql from 'graphql-tag';
 
 export const BUNDLE = gql`
-    query bundle($bundleId: string) {
+    query bundle($bundleId: String!) {
         bundle(bundleId: $bundleId) {
             name,
             totalSessions,
