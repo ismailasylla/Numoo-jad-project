@@ -1,13 +1,15 @@
 import React, { useContext, useState, useEffect, createContext } from 'react';
 import { ContextProps } from './interfaces';
 import { auth } from '../config';
+import { UserCredential } from '@firebase/auth-types';
 
 interface Props {
   currentUser: any;
-  signup: (email: string, password: string) => void;
-  signin: (email: string, password: string) => void;
+  signup: (email: string, password: string) => Promise<UserCredential>;
+  signin: (email: string, password: string) => Promise<UserCredential>;
   signout: () => void;
 }
+
 const AuthContext = createContext<Props>({} as Props);
 
 function useAuth() {
@@ -18,12 +20,14 @@ function AuthProvider({ children }: ContextProps): JSX.Element {
   const [currentUser, setCurrentUser] = useState<any>();
   const [loading, setLoading] = useState(true);
 
-  function signup(email: string, password: string) {
-    return auth.createUserWithEmailAndPassword(email, password)
+  async function signup (email: string, password: string) : Promise<UserCredential> {
+    return auth.createUserWithEmailAndPassword(email, password);
   }
-  function signin(email: string, password: string) {
-    return auth.signInWithEmailAndPassword(email, password);
+
+  async function signin(email: string, password: string) : Promise<UserCredential>  {
+    return await auth.createUserWithEmailAndPassword(email, password);
   }
+
   function signout() {
     return auth.signOut();
   }

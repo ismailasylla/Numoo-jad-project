@@ -5,25 +5,18 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { AppProvider } from './context/AppContext';
 import { AuthProvider } from './context/AuthContext';
-import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
-
-const client = new ApolloClient({
-  uri: 'https://test-2-numoo-api.azurewebsites.net/graphql',
-  cache: new InMemoryCache(),
-  headers:{ 
-    "Access-Control-Allow-Origin": "*"
-  }
-});
+import { ApolloProvider } from '@apollo/client/react';
+import apiClient from 'apollo/apiClient';
 
 ReactDOM.render(
   <AppProvider>
-    <AuthProvider>
-      <React.StrictMode>
-        <ApolloProvider client={client}>
-          <App />
-        </ApolloProvider>
-      </React.StrictMode>
-    </AuthProvider>
+    <ApolloProvider client={apiClient}>
+      <AuthProvider>
+        <React.StrictMode>
+            <App />
+        </React.StrictMode>
+      </AuthProvider>
+    </ApolloProvider>
   </AppProvider>,
   document.getElementById('root')
 );
