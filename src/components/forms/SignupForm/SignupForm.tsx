@@ -7,7 +7,7 @@ import {  useMutation } from '@apollo/client';
 import { CREATE_COACHEE } from 'graphql/mutations/createCoachee.mutation';
 
 function Signup(props: any) {
-  const { signup } = useAuth();
+  const { signup, coacheeCreated } = useAuth();
   const [loading, setLoading] = useState(false);
   const [createCoachee] = useMutation(CREATE_COACHEE);
 
@@ -44,7 +44,7 @@ function Signup(props: any) {
         error.message
       ]);
     }
-
+    console.log("FIREBASE")
     try {
       await createCoachee({ variables: {
         createCoachee: {
@@ -63,6 +63,8 @@ function Signup(props: any) {
         'Something went wrong'
       ]);
     }
+    
+    coacheeCreated();
   }
 
   return (

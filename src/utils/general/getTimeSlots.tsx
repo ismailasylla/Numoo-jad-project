@@ -1,5 +1,5 @@
 const getTimeSlots = (intervals : number) => {
-  let timeSlots = [];
+  const timeSlots = [];
   
   
 }

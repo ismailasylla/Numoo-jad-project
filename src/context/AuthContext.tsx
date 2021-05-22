@@ -4,7 +4,9 @@ import { auth } from '../config';
 import { UserCredential } from '@firebase/auth-types';
 
 interface Props {
+  isCreated: boolean;
   currentUser: any;
+  coacheeCreated: () => void;
   signup: (email: string, password: string) => Promise<UserCredential>;
   signin: (email: string, password: string) => Promise<UserCredential>;
   signout: () => void;
@@ -19,6 +21,7 @@ function useAuth() {
 function AuthProvider({ children }: ContextProps): JSX.Element {
   const [currentUser, setCurrentUser] = useState<any>();
   const [loading, setLoading] = useState(true);
+  const [isCreated, setIsCreated] = useState(false);
 
   async function signup (email: string, password: string) : Promise<UserCredential> {
     return auth.createUserWithEmailAndPassword(email, password);
@@ -32,16 +35,22 @@ function AuthProvider({ children }: ContextProps): JSX.Element {
     return auth.signOut();
   }
 
+  function coacheeCreated() {
+    setIsCreated(true);
+  }
+
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged(user => {
-        setCurrentUser(user)
-        setLoading(false);
+      setCurrentUser(user)
+      setLoading(false);
     });
     return unsubscribe;
   }, []);
 
   const value = {
     currentUser,
+    coacheeCreated,
+    isCreated,
     signup,
     signin,
     signout
