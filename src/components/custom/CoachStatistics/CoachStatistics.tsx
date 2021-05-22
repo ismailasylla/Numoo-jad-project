@@ -21,7 +21,7 @@ function CoachStatistics({ numooHours, experience, rating, tags }: Props) {
       <StatisticTypeContainer>
         <StatisticType>in numoo</StatisticType>
         <StatisticType>of experience</StatisticType>
-        <StatisticType>rating</StatisticType>
+        <StatisticType>{rating} rating</StatisticType>
       </StatisticTypeContainer>
 
       <Tags>

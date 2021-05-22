@@ -4,15 +4,10 @@ export {
   Questions,
   LangSwitch,
   CoachTypes,
-  Header
-} from './general';
+  Header,
+} from "./general";
 
-export {
-  ButtonNormal,
-  ButtonNav,
-  ButtonText,
-  ButtonDropdown,
-} from './buttons';
+export { ButtonNormal, ButtonNav, ButtonText, ButtonDropdown } from "./buttons";
 
 export {
   MainHeading,
@@ -20,29 +15,20 @@ export {
   LabelHeading,
   DescriptionHeading,
   IconHeading,
-} from './headings';
+} from "./headings";
 
-export {
-  DropDown,
-  InputText
-} from './inputs';
+export { DropDown, InputText } from "./inputs";
 
-export {
-  LoginForm,
-  SignupForm
-} from './forms';
+export { LoginForm, SignupForm } from "./forms";
 
-export  {
-  PopoverNavbar
-} from './popover';
+export { PopoverNavbar } from "./popover";
 
-export {
-  ModalConfirm
-} from './modals';
+export { ModalConfirm } from "./modals";
 
 export {
   CardCoach,
   CoachDetail,
   CoachShortProfile,
-  CoachStatistics
-} from './custom';
+  CoachStatistics,
+  CoachBooking,
+} from "./custom";

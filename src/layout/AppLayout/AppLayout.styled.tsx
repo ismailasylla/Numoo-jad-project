@@ -5,6 +5,5 @@ export const Container = styled.div`
   background-color: #ffffff;
 `;
 export const Content = styled.div`
-  /* width: 85%; */
   margin: 0px auto;
 `;

@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { colors } from '../../../constants';
 import { Select, Pagination, Input } from "antd";
 
-
 export const LocationSearch = styled(Input.Search)`
   width: 100%;
   font-family: Lexend;

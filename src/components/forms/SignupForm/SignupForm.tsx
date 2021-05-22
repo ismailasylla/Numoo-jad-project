@@ -1,15 +1,18 @@
 import React, { useState, useRef } from "react";
 import { Container, FormWrapper, InputWrapper } from "./SignupForm.styled";
 import { useAuth } from "../../../context/AuthContext";
-import { ButtonNormal, InputText, DropDown } from "components";
+import { ButtonNormal, InputText } from "components";
 import { notify } from "utils";
-import FormTitle from "components/forms/FormTitle/FormTitle";
+import { useMutation } from "@apollo/client";
+import { CREATE_COACHEE } from "graphql/mutations/createCoachee.mutation";
 
 import { AdSenseInput, DatePickerInput } from "components/inputs";
+import { FormLabel } from "components/headings";
 
 function Signup(props: any) {
-  const { signup } = useAuth();
+  const { signup, coacheeCreated } = useAuth();
   const [loading, setLoading] = useState(false);
+  const [createCoachee] = useMutation(CREATE_COACHEE);
 
   const firstNameRef = useRef<HTMLInputElement>(null);
   const lastNameRef = useRef<HTMLInputElement>(null);
@@ -21,24 +24,49 @@ function Signup(props: any) {
   const onSubmit = async () => {
     const email = emailRef.current?.value;
     const password = passwordRef.current?.value;
-    const confirmPasswor = confirmPasswordRef.current?.value;
-    if (email && password && confirmPasswor) {
-      setLoading(true);
-      try {
-        await signup(email, password);
-      } catch (error) {
-        setLoading(false);
-        notify(["open", "Something went wrong", error.message]);
-      }
-    } else {
+
+    const confirmPassword = confirmPasswordRef.current?.value;
+
+    if (!email || !password || !confirmPassword) {
       setLoading(false);
       notify(["open", "Something went wrong", "Please fill all the inputs"]);
+
+      return;
     }
+
+    let firebaseUser;
+
+    setLoading(true);
+    try {
+      firebaseUser = await signup(email, password);
+    } catch (error) {
+      setLoading(false);
+      notify(["open", "Something went wrong", error.message]);
+    }
+    console.log("FIREBASE");
+    try {
+      await createCoachee({
+        variables: {
+          createCoachee: {
+            firebaseAuthId: firebaseUser?.user?.uid,
+            firstName: email,
+            lastName: email + "last",
+            email,
+            dateOfBirth: "1995-01-01",
+          },
+        },
+      });
+    } catch (error) {
+      setLoading(false);
+      notify(["open", "Something went wrong"]);
+    }
+
+    coacheeCreated();
   };
 
   return (
     <Container>
-      <FormTitle title={"Sign up"} />
+      <FormLabel title={"Sign up"} />
       <FormWrapper>
         <InputWrapper>
           <InputText

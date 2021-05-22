@@ -18,7 +18,7 @@ import {
   CardCoach,
   ButtonDropdown,
 } from "../../../components";
-import data from "../../../dummy/coaches";
+import data from "../../../dummy/coaches/coaches";
 import { dropdowns } from "../../../constants";
 
 function Coaches(props: any): JSX.Element {
@@ -34,6 +34,9 @@ function Coaches(props: any): JSX.Element {
   }
   function handleLanguage(e: any) {
     console.log("handleLanguage item", e);
+  }
+  function handleLocation(e: any) {
+    console.log("handleLocation item", e);
   }
   function handleGender(e: any) {
     console.log("handleGender item", e);

@@ -9,7 +9,7 @@ import {
 import { useAuth } from "context/AuthContext";
 import { ButtonNormal, InputText } from "components";
 import { notify } from "utils";
-import FormTitle from "../FormTitle/FormTitle";
+import { FormLabel } from "components/headings";
 
 function LoginForm(props: any) {
   const { signin } = useAuth();
@@ -21,23 +21,26 @@ function LoginForm(props: any) {
   const onSubmit = async () => {
     const email = emailRef.current?.value;
     const password = passwordRef.current?.value;
-    if (email && password) {
-      setLoading(true);
-      try {
-        await signin(email, password);
-      } catch (error) {
-        setLoading(false);
-        notify(["open", "Something went wrong", error.message]);
-      }
-    } else {
+
+    if (!email || !password) {
       setLoading(false);
       notify(["open", "Something went wrong", "Please fill all the inputs"]);
+
+      return;
+    }
+
+    setLoading(true);
+    try {
+      await signin(email, password);
+    } catch (error) {
+      setLoading(false);
+      notify(["open", "Something went wrong", error.message]);
     }
   };
 
   return (
     <Container>
-      <FormTitle title={"Log in"} />
+      <FormLabel title={"Log in"} />
       <FormWrapper>
         <InputText
           type={"text"}

@@ -17,14 +17,14 @@ import { I18nProvider } from "./i18n";
 
 function App(): JSX.Element {
   const { state } = useContext(AppContext);
-  const { currentUser } = useAuth();
-
+  const { currentUser, isCreated } = useAuth();
+  
   const AuthRoute = ({ component: Component, ...rest }: any) => {
     return (
       <Route
         {...rest}
         render={(props) =>
-          currentUser ? (
+          currentUser && isCreated ? (
             <Redirect
               to={{
                 pathname: "/app/coaches",

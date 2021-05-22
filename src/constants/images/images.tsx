@@ -8,6 +8,7 @@ const images = {
   LANGUAGE: require('assets/images/language.png').default,
   LOCATION: require('assets/images/location.png').default,
   INFO: require('assets/images/info.png').default,
+  VIDEO_ICON: require('assets/images/circled_play.png').default,
 }
 
 export default images;
