@@ -3,12 +3,9 @@ import { Container, FormWrapper, InputWrapper } from "./SignupForm.styled";
 import { useAuth } from "../../../context/AuthContext";
 import { ButtonNormal, InputText, DropDown } from "components";
 import { notify } from "utils";
-import { DropDownWrapper } from "components/inputs/DropDown/DropDown.styled";
-import DatePIcker from "components/inputs/DatePicker/DatePIcker";
-import AdSenseInput from "components/inputs/AdSenseInput/AdSenseInput";
-import { AdSenseInputWrapper } from "components/inputs/AdSenseInput/AdSenseInputWrapper.styled";
-import FormTitle from "../FormTitle/FormTitle";
-import PickerTitleSelect from "../PickerTitleSelect/PickerTitleSelect";
+import FormTitle from "components/forms/FormTitle/FormTitle";
+
+import { AdSenseInput, DatePickerInput } from "components/inputs";
 
 function Signup(props: any) {
   const { signup } = useAuth();
@@ -60,9 +57,8 @@ function Signup(props: any) {
           />
         </InputWrapper>
 
-        <DropDownWrapper>
-          <DatePIcker />
-        </DropDownWrapper>
+        <DatePickerInput type="text" label="Date of Birth"></DatePickerInput>
+
         <InputText
           type={"text"}
           label={"Email"}
@@ -91,10 +87,9 @@ function Signup(props: any) {
           name="password"
           ref={confirmPasswordRef}
         />
-        <AdSenseInputWrapper>
-          <PickerTitleSelect title={"Source"} />
-          <AdSenseInput></AdSenseInput>
-        </AdSenseInputWrapper>
+
+        <AdSenseInput type="text" label="Sources"></AdSenseInput>
+
         <ButtonNormal
           label={loading ? "Loading..." : "Sign up"}
           fill="true"

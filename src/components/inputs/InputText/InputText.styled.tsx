@@ -1,9 +1,7 @@
-import styled from 'styled-components';
-import { colors } from '../../../constants';
+import styled from "styled-components";
+import { colors } from "../../../constants";
 
-export const Container = styled.div`
-
-`;
+export const Container = styled.div``;
 
 export const InputLabel = styled.div`
   color: ${colors.primaryMedium};
@@ -12,12 +10,12 @@ export const InputLabel = styled.div`
 export const Input = styled.input`
   padding: 10px 20px;
   width: 100%;
-  border: 1px solid #EEE;
+  border: 1px solid #eee;
   border-radius: 4px;
   margin-bottom: 20px;
 
   ::-webkit-input-placeholder {
-    color: #DDD;
+    color: #ddd;
   }
   &:focus {
     outline: none;

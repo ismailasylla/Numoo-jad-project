@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { colors } from "../../../constants";
 
 interface TextProps {
-  isColor?: string;
+  hasBackgroundColor?: string;
 }
 
 export const Container = styled.div`
@@ -32,6 +32,6 @@ export const Button = styled.button<TextProps>`
     color: white;
     border-width: 0px;
     background-color: ${(props) =>
-      props.isColor ? `${null}` : `${colors.btnBackground}`};
+      props.hasBackgroundColor ? `${null}` : `${colors.btnBackground}`};
   }
 `;

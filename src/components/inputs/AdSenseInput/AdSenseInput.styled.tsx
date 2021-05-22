@@ -2,11 +2,11 @@ import styled from "styled-components";
 import { colors } from "../../../constants";
 
 export const Container = styled.div`
-  width: 100%;
-  padding: 7px 0px;
+  top: 10;
+  margin-bottom: 30px;
 `;
 
-export const Text = styled.span`
-  color: rgb(88, 49, 162);
-  margin-bottom: -5px;
+export const AdSenseLabel = styled.div`
+  color: ${colors.primaryMedium};
+  margin-bottom: 5px;
 `;

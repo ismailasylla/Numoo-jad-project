@@ -1,13 +1,15 @@
 import React from "react";
 import { Container, Button } from "./ButtonStartJourney.styled";
 interface Props {
-  isColor?: string;
+  hasBackgroundColor?: string;
 }
-function ButtonStartJourney({ isColor }: Props) {
+function ButtonStartJourney({ hasBackgroundColor }: Props) {
   return (
     <div>
       <Container>
-        <Button isColor={isColor}>Start your journey now</Button>
+        <Button hasBackgroundColor={hasBackgroundColor}>
+          Start your journey now
+        </Button>
       </Container>
     </div>
   );

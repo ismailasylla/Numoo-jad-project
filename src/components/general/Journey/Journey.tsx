@@ -8,8 +8,7 @@ import {
 import { JourneyIconMatch as ICON_MATCH } from "../Journey/Journey.styled";
 import { JourneyIconMeat as ICON_MEAT } from "../Journey/Journey.styled";
 import { JourneyIconGrow as ICON_GROW } from "../Journey/Journey.styled";
-
-import ButtonStartJourney from "components/buttons/ButtonStartJourney/ButtonStartJourney";
+import { ButtonStartJourney } from "components/buttons";
 
 function Journey() {
   const data = [
