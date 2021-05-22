@@ -25,7 +25,7 @@ function AuthProvider({ children }: ContextProps): JSX.Element {
   }
 
   async function signin(email: string, password: string) : Promise<UserCredential>  {
-    return await auth.createUserWithEmailAndPassword(email, password);
+    return auth.signInWithEmailAndPassword(email, password);
   }
 
   function signout() {
