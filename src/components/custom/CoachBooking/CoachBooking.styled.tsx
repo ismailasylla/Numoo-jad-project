@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { colors } from "../../../constants";
 import { DatePicker, TimePicker } from "antd";
+import { ButtonDropdown } from "components";
 
 export const Container = styled.div`
 margin-bottom: 40px;
@@ -14,12 +15,16 @@ export const FlexContainer = styled.div`
 export const InputContainer = styled.div`
   width: 100%;
 `;
+export const TimeContainer = styled.div`
+  width: 70%;
+`;
 
 export const DateSelect = styled(DatePicker)`
   width: 70%;
 `;
-export const TimeSelect = styled(TimePicker)`
-width: 70%;
+export const TimeSelect = styled(ButtonDropdown)`
+width: 70% !important;
+margin-left: 40px;
 `;
 
 

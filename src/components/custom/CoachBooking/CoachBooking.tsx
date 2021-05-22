@@ -1,11 +1,15 @@
 import React, {useState} from 'react';
-import { Container, FlexContainer, InputContainer, DateSelect, TimeSelect, MessageContainer, MessageIcon, MessageText, TimezoneText } from './CoachBooking.styled';
+import { Container, FlexContainer, InputContainer, TimeContainer, DateSelect, TimeSelect, MessageContainer, MessageIcon, MessageText, TimezoneText } from './CoachBooking.styled';
 import { LabelHeading, ButtonNav } from 'components';
-import { images } from '../../../constants';
-import { getTimeZone, isSameDate, emptyObject } from '../../../utils';
+import { images, dropdowns } from '../../../constants';
+import { getTimeZone, isSameDate } from '../../../utils';
 import moment from "moment";
 import ar from "antd/es/date-picker/locale/ar_EG";
 
+interface TimeDropdownInterface{
+  label: string;
+  date: string;
+}
 interface AvailableInterface{
   from: string;
   to: string;
@@ -22,17 +26,19 @@ interface Props {
 }
 
 function CoachBooking({ available, booked, canReschedule, chemCheck, canSkip }: Props) {
-  const [timeValue, setTimeValue] = useState<moment.Moment | null>(null);
-  const [availableTimes, setAvailableTimes] = useState<AvailableInterface>();
-  const [bookedTimes, setBookedTimes] = useState<Array<string>>([]);
-  const [isToday, setIsToday] = useState(false);
-  const [dateNotSelected, setDateNotSelected] = useState(true);
-  
   let defaultMinuteStep = 60;
   if(chemCheck){
     defaultMinuteStep = 15;
   }
   const minuteStep = defaultMinuteStep;
+  const [availableTimes, setAvailableTimes] = useState<AvailableInterface>();
+  const [bookedTimes, setBookedTimes] = useState<Array<string>>([]);
+  const [isToday, setIsToday] = useState(false);
+  const [timeDropdownDisabled, setTimeDropdownDisabled] = useState(true);
+  const [timeValue, setTimeValue] = useState<moment.Moment | null>(null);
+  const [timeDrowdown, setTimeDropdown] = useState<Array<TimeDropdownInterface>>([]);
+  
+  
 
   function disabledDates(current: any) {
     if(current && current < moment(moment(), "DD-MM-YYYY").subtract(1, 'd')){
@@ -47,7 +53,7 @@ function CoachBooking({ available, booked, canReschedule, chemCheck, canSkip }: 
   }
   function dateChange(e: any) {
     setTimeValue(null);
-    setDateNotSelected(false);
+    setTimeDropdownDisabled(false);
     if(isSameDate(e, moment())){
       setIsToday(true);
     }
@@ -149,21 +155,9 @@ function CoachBooking({ available, booked, canReschedule, chemCheck, canSkip }: 
             ></DateSelect>
           </InputContainer>
           <InputContainer>
-            <TimeSelect 
-              size="large" 
-              disabled={dateNotSelected}
-              onSelect={timeChange} 
-              inputReadOnly={true} 
-              allowClear={false}
-              value={timeValue} 
-              hideDisabledOptions={true} 
-              format={'HH:mm'} 
-              minuteStep={minuteStep} 
-              disabledHours={disabledHours} 
-              disabledMinutes={getDisabledMinutes} 
-              showNow={false}
-              locale={ar}
-            ></TimeSelect>
+            <TimeContainer>
+              <TimeSelect items={dropdowns.experience} label="Select Time" parentCallback={timeChange}></TimeSelect>
+            </TimeContainer>
           </InputContainer>
         </FlexContainer>
 

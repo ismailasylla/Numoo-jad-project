@@ -2,6 +2,7 @@ export { default as capitalizeFirstLetter } from './general/capitalizeFirstLette
 export { default as emptyObject } from './general/emptyObject';
 export { default as getTimeZone } from './general/getTimeZone';
 export { default as isSameDate } from './general/isSameDate';
+export { default as getTimeSlots } from './general/getTimeSlots';
 
 export { default as IntlMessage } from './i18n/intlMessage';
 
