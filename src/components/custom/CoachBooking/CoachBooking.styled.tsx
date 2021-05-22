@@ -3,6 +3,7 @@ import { colors } from "../../../constants";
 import { DatePicker, TimePicker } from "antd";
 
 export const Container = styled.div`
+margin-bottom: 40px;
 `;
 
 export const FlexContainer = styled.div`
@@ -27,6 +28,14 @@ export const MessageContainer = styled.div`
   align-items: center;
   margin-bottom: 15px;
 `;
+export const TimezoneText = styled.div`
+  font-family: Lexend;
+  color: ${colors.secondaryTextLight};
+  font-size: 16px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+`;
+
 export const MessageText = styled.span`
   color: ${colors.secondaryTextLight};
   display: inline;

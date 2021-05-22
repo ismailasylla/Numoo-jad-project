@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { Container, FilterInputWrapper, CoachesWrapper, CoachesBoxLeft, CoachesBoxRight, CategorySelect, CategoryOption, CategoryText, CoachesPagination, LocationSearch } from "./CoachesPage.styled";
 import { MainHeading, SubHeading, LabelHeading, CardCoach, ButtonDropdown } from '../../../components';
-import data from '../../../dummy/coaches';
+import { data } from 'dummy';
 import { dropdowns } from '../../../constants';
 
 function Coaches(props: any): JSX.Element {
@@ -56,7 +56,6 @@ function Coaches(props: any): JSX.Element {
               placeholder="Any"
               onChange={handleCategory}
               >
-
               {dropdowns.categories.map((item, key) => 
                 <CategoryOption key={key} value={item}><CategoryText>{item}</CategoryText></CategoryOption>
               )}

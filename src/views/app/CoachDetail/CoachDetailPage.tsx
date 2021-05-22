@@ -1,7 +1,7 @@
 import React, {useState, useRef} from 'react';
 import { Container, CoacheDetailWrapper, CoacheDetailBoxLeft, CoacheDetailBoxRight, AboutWrapper, AboutText, VideoBox, VideoIcon, VideoModal, VideoText } from './CoachDetailPage.styled';
 import { LabelHeading, CoachDetail, CoachShortProfile, CoachStatistics } from 'components';
-import data from '../../../dummy/coaches';
+import { data } from '../../../dummy';
 import { images } from '../../../constants';
 
 function CoachDetailPage({ props }: any): JSX.Element {
