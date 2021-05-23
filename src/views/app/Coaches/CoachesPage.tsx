@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import {
   Container,
-  FilterInputWrapper,
+  FilterNameInputWrapper,
   CoachesWrapper,
   CoachesBoxLeft,
   CoachesBoxRight,
@@ -66,7 +66,7 @@ function Coaches(props: any): JSX.Element {
         <CoachesBoxLeft>
           <SubHeading isGreyed="true" title={"Preferences"} />
 
-          <FilterInputWrapper>
+          <FilterNameInputWrapper>
             <LabelHeading isGreyed="true" title={"Category"} />
             <CategorySelect
               size="large"
@@ -82,27 +82,27 @@ function Coaches(props: any): JSX.Element {
                 </CategoryOption>
               ))}
             </CategorySelect>
-          </FilterInputWrapper>
+          </FilterNameInputWrapper>
 
-          <FilterInputWrapper>
+          <FilterNameInputWrapper>
             <LabelHeading isGreyed="true" title={"Experience"} />
             <ButtonDropdown
               items={dropdowns.experience}
               label="Any"
               parentCallback={handleExperience}
             ></ButtonDropdown>
-          </FilterInputWrapper>
+          </FilterNameInputWrapper>
 
-          <FilterInputWrapper>
+          <FilterNameInputWrapper>
             <LabelHeading isGreyed="true" title={"Language"} />
             <ButtonDropdown
               items={dropdowns.language}
               label="Any"
               parentCallback={handleLanguage}
             ></ButtonDropdown>
-          </FilterInputWrapper>
+          </FilterNameInputWrapper>
 
-          <FilterInputWrapper>
+          <FilterNameInputWrapper>
             <LabelHeading isGreyed="true" title={"Location"} />
             <CategorySelect
               showSearch
@@ -117,25 +117,25 @@ function Coaches(props: any): JSX.Element {
                 </CategoryOption>
               ))}
             </CategorySelect>
-          </FilterInputWrapper>
+          </FilterNameInputWrapper>
 
-          <FilterInputWrapper>
+          <FilterNameInputWrapper>
             <LabelHeading isGreyed="true" title={"Gender"} />
             <ButtonDropdown
               items={dropdowns.genders}
               label="Any"
               parentCallback={handleGender}
             ></ButtonDropdown>
-          </FilterInputWrapper>
+          </FilterNameInputWrapper>
 
-          <FilterInputWrapper>
+          <FilterNameInputWrapper>
             <LabelHeading isGreyed="true" title={"Budget"} />
             <ButtonDropdown
               items={dropdowns.budget}
               label="Any"
               parentCallback={handleBudget}
             ></ButtonDropdown>
-          </FilterInputWrapper>
+          </FilterNameInputWrapper>
         </CoachesBoxLeft>
         <CoachesBoxRight>
           {data &&

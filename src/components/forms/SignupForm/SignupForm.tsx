@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { Container, FormWrapper, InputWrapper } from "./SignupForm.styled";
+import { Container, FormWrapper, NameInputWrapper } from "./SignupForm.styled";
 import { useAuth } from "../../../context/AuthContext";
 import { ButtonNormal, InputText } from "components";
 import { notify } from "utils";
@@ -68,7 +68,7 @@ function Signup(props: any) {
     <Container>
       <FormLabel title={"Sign up"} />
       <FormWrapper>
-        <InputWrapper>
+        <NameInputWrapper>
           <InputText
             type={"text"}
             label={"First Name"}
@@ -83,7 +83,7 @@ function Signup(props: any) {
             name="LastName"
             ref={lastNameRef}
           />
-        </InputWrapper>
+        </NameInputWrapper>
 
         <DatePickerInput type="text" label="Date of Birth"></DatePickerInput>
 
